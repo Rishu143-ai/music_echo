@@ -1,0 +1,42 @@
+<header>
+    <h1>🎵 Welcome to the Music Downloader</h1>
+    <button id="aboutBtn" class="about-btn">ℹ️ About</button>
+</header>
+
+<!-- About Popup -->
+<div id="aboutPopup" class="about-popup hidden">
+    <div class="about-content">
+        <span id="closeAbout" class="close-btn">&times;</span>
+        <h2>About 🎶</h2>
+        <p>
+            This <strong>Music listening and downloading</strong> lets you search, play, and download songs directly with ease.
+            <br><br>
+            Features:
+        <ul>
+            <li>🎧 Stream music instantly</li>
+            <li>⬇️ Download songs with artist name</li>
+            <li>🎵 Auto-next and bottom player</li>
+            <li>🌈 Dynamic gradient effects</li>
+        </ul>
+        <p style="font-size: 13px; opacity: 0.8;">Made with ❤️ using Flask + HTML + CSS + JS</p>
+        </p>
+    </div>
+</div>
+<footer>Copyright 2025. All right Reserved</footer>
+<script>
+    const aboutBtn = document.getElementById("aboutBtn");
+    const aboutPopup = document.getElementById("aboutPopup");
+    const closeAbout = document.getElementById("closeAbout");
+
+    aboutBtn.addEventListener("click", () => {
+        aboutPopup.classList.remove("hidden");
+    });
+
+    closeAbout.addEventListener("click", () => {
+        aboutPopup.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === aboutPopup) aboutPopup.classList.add("hidden");
+    });
+</script>
